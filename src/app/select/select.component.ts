@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class SelectComponent {
   @Input() data: any[] = [];
-  @Input() label!: string;
+  @Input() labell!: string;
 
   @Output() selectedValue = new EventEmitter();
 
