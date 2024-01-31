@@ -1,0 +1,22 @@
+
+<div class="container">
+    <h1 class="text-center text-light bg-dark p-2 m-3">
+      {{title}}
+    </h1>
+    <div class="row mt-5 mb-5">
+        <div *ngFor="let h of shared.HeroList" class="col-3">
+            <div class="card">
+                <div class="card-image">
+                    <img [src]="h.image" style="height: 300px;" class="w-100">
+                </div>
+                <div class="card-body">
+                    <h2>{{h.name}}</h2>
+                    <p>Power : {{h.power}}</p>
+                </div>
+                <button class="btn btn-warning" *ngIf="showupdate">Update</button>
+                <button class="btn btn-danger mt-1" *ngIf="showdelete" (click)="Delete(h.name)">Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>
